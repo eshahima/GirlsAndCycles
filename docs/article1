@@ -1,0 +1,48 @@
+<html>
+  <head>
+     <div class = "header">
+
+      <meta charset="UTF-8">
+      <!--viewport= changes to specific windows-->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel ="stylesheet" type="text/css" href="style.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <script src="myscripts.js"></script>
+      <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+       <a href= "carasouel.html"> 
+<img src = "previousbtn.png" style = "height:50px; width:50px"></a>
+    </head>
+
+<body>
+  <div class="parallax-container">
+  <p class ="article1header"> Memes and the Menstrual Cycle</p>
+    <div class = "parallax-text">
+<p class = "parallax-text" style = "font-size: 20px;">
+  In recent months, you might have seen memes on TikTok, Reels, and posts with captions including phrases like follicular phase, luteal phase, and menstrual bloating. The menstrual cycle and its effects continue to make headlines, but how does it work? Does it significantly affect other parts of the body?
+
+  The menstrual cycle is a cycle a woman's body goes through every month and has many phases. The first phase is <a href ="https://www.medicalnewstoday.com/articles/319579#outlook"> menstruation </a> which is when the uterus lining sheds and usually lasts 3 to 7 days. It has several symptoms like pain in the lower back, fatigue, headaches, bloating, irritability, nausea, and anxiety. However, symptoms vary for everyone. Likewise, some women have light and painless periods, while other women have heavy and painful periods. So, women are advised to exercise regularly and reduce stress to avoid having heavy and painful periods. Also, women can use birth control to avoid getting periods and take pain relievers to cure their menstrual cramps. So, generally after 7 days, a woman’s period ends.
+</p>
+
+<p class = "parallax-text" style = "font-size: 20px;">
+  The next phase of the menstrual cycle is the <a href = "https://www.healthline.com/health/womens-health/follicular-phase">follicular phase, </a> lasting for about 16 days. During this phase, the body prepares for a potential pregnancy. The hypothalamus sends a message to the pituitary gland, which causes the start of FSH, also known as follicle-stimulating hormone, production. The presence of FSH prompts the ovaries to produce follicles carrying immature eggs. One of the 20 follicles stays and the others wilt away and that follicle increases estrogen levels. These increasing estrogen levels cause a decrease in FSH production as the uterus lining thickens. Eventually, estrogen production is slowed due to the increase in luteinizing hormone which marks the beginning of ovulation. 
+</p>
+  <p class = "parallax-text" style = "font-size: 20px;">
+  During <a href="https://my.clevelandclinic.org/health/articles/23439-ovulation">ovulation, </a> the ovary releases an egg, which travels down the fallopian tube, waiting for it to be fertilized by a sperm.
+  </p>
+<p class = "parallax-text" style = "font-size: 20px;">
+  If the egg isn’t fertilized, the body continues to the next phase, which is the <a href = "https://www.healthline.com/health/womens-health/luteal-phase"> luteal phase, </a>lasting from 11 to 17 days. During this phase, the follicle that releases the egg becomes corpus luteum. The corpus luteum releases progesterone and estrogen, while the uterus lining thickens and blood vessels grow. So, in case of pregnancy, the blood vessels can supply oxygen to the embryo and HCG (human gonadotropin) production maintains the corpus luteum. If the egg doesn’t get fertilized, the corpus luteum shrinks and dies, while progesterone levels decrease.  
+</p>
+  <p class = "parallax-text" style = "font-size: 20px;">
+  As you can see, the menstrual cycle significantly affects the endocrine system. However, it also affects the body and mind, too. For example, as menstruation begins, estrogen levels decrease, causing neuropeptide levels to decrease too. Neuropeptide, a signaling molecule, manages control and thirst and is located in the scalp and hypothalamus. Therefore, the drop in neuropeptide levels, causes women to not eat or drink enough, leading to <a href= "https://www.science.org/content/article/demystifying-menstrual-migraines">migraines</a>. Furthermore, <a href ="https://www.medicalnewstoday.com/articles/327326#what-symptoms-are-normal">women’s weight</a> begins to fluctuate throughout the cycle. There are two reasons for this. One, women tend to eat more during the luteal phase and less during the follicular. Also, water and salt retention increases due to the presence of progesterone, causing bloating and swelling in the upper and lower limbs and abdomen. Moreover, women who tend to have heavy or painful periods, have significant changes in their <a href="https://www.healthcentral.com/article/blood-pressure-affect-menstrual-cycles">blood pressure</a>. Some have low blood pressure, others have high blood pressure during their periods. High blood pressure can be an effect of reproductive hormones on aldosterone (its increase leads to higher BP) and high inflammation levels. Low blood pressure occurs due to blood loss causing anemia, leading to low levels of oxygen and decreased blood pressure. 
+</p>
+  <p class = "parallax-text" style = "font-size: 20px;">
+  So, now that you know what the menstrual cycle and its effects are, you can understand what all those period memes are talking about!
+
+    </p>
+    </div>
+  </div><!--<img src="gandc.png" id = logo> </img>--> 
+</body>
+</html>
