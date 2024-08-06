@@ -1,11 +1,11 @@
-$(document).ready(function() {
+//$(document).ready(function() {
 
-  $(".carouselcontrolprev").click(
-    alert(1);
-  );
+  //$(".carouselcontrolprev").click(
+   // alert(1);
+  //);
 
-  $(".carouselcontrolnext").click(function() {
-    $("#myCarousel").carousel("next");
-    alert(2);
+ // $(".carouselcontrolnext").click(function() {
+    //$("#myCarousel").carousel("next");
+    //alert(2);
   });
 });
