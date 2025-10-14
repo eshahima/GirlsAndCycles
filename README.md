@@ -45,5 +45,5 @@ I used the **Menstrual Cycle Data** from [Kaggle](https://www.kaggle.com/dataset
 Hi again, I’m **Esha Himagirish** 👋  
 If you’d like to connect, collaborate, or learn more about my work:  
 
-- **LinkedIn**: [Esha Himagirish](www.linkedin.com/in/esha-himagirish-ab7072327)  
+- **LinkedIn**: [Esha Himagirish](https://www.linkedin.com/in/esha-himagirish/)  
 - **GitHub**: [esha hima](https://github.com/eshahima)  
