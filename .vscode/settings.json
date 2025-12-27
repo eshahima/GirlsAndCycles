@@ -1,0 +1,14 @@
+{
+  // Disable VS Code inline suggestions in this workspace
+  "editor.inlineSuggest.enabled": false,
+
+  // Reduce other inline/quick suggestions (optional)
+  "editor.quickSuggestions": {
+    "other": false,
+    "comments": false,
+    "strings": false
+  },
+
+  // If GitHub Copilot extension is installed, disable its inline suggestions for this workspace
+  "github.copilot.inlineSuggest.enable": false
+}

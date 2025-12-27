@@ -189,23 +189,23 @@ a {
   border: 2px solid #FF80AB; 
 }
 .follicularphase{
-   display: grid;
-   grid-template-columns: 1fr 1fr;
-   column-gap: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 5px;
 }
 .introtofc{
   box-sizing: border-box; 
   border: 2px solid #FF80AB; 
 }
 .ovulat{
-   display: grid;
-   grid-template-columns: 1fr 1fr;
-   column-gap: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 5px;
 }
 .lute{
   display: grid;
-   grid-template-columns: 1fr 1fr 1fr;
-   column-gap: 5px;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 5px;
 }
 .introlute{
   box-sizing: border-box; 
@@ -263,8 +263,8 @@ a {
 }
 .changeinmenstrualtwo{
   display: grid;
-   grid-template-columns: 1fr 1fr;
-   column-gap: 5px;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 5px;
   
 }
 /* article 2*/
@@ -312,15 +312,15 @@ a {
 }
 
 .founderin {
- display: grid;
- grid-template-columns: 1fr 1fr ;
- column-gap: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  column-gap: 5px;
 }
 
 .create{
-   display: grid;
-   grid-template-columns: 1fr 1fr ;
-   column-gap: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  column-gap: 50px;
 }
 
 .picscreate{
@@ -329,11 +329,22 @@ a {
   height: 600%;
 }
 .datavizulmethod{
-   display: grid;
-   grid-template-columns: 1fr 1fr ;
-   column-gap: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  column-gap: 50px;
 
 }
 .datavizulmethodpic{  
   width: 460%;
- height: 460%;}
+  height: 460%;
+}
+
+/* styling for simulator notes (rendered as an H2) */
+.simulator-notes {
+  font-size: 1.4rem;
+  color: #FF8FAB;
+  font-family: "Jost", sans-serif;
+  font-weight: 600;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
