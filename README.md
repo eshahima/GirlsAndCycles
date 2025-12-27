@@ -25,9 +25,9 @@ This simulator represents my current work on the project and applies concepts fr
 
 ## 🛠️ Technologies Used (Simulator)
 
--Java (initial modeling & OOP design)
--HTML / CSS (UI integration)
--JavaScript (logic translation & interactivity): **event-driven JavaScript to connect the simulation logic to the UI.**
+- **Java** (initial modeling & OOP design)
+- **HTML / CSS** (UI integration)
+- **JavaScript** (logic translation & interactivity): **event-driven JavaScript to connect the simulation logic to the UI.**
 
 
 ---
