@@ -26,11 +26,10 @@ This simulator represents my current work on the project and applies concepts fr
 ## 🛠️ Technologies Used (Simulator)
 
 -Java (initial modeling & OOP design)
-
--JavaScript (logic translation & interactivity)
-  -**event-driven JavaScript to connect the simulation logic to the UI.**
-
 -HTML / CSS (UI integration)
+-JavaScript (logic translation & interactivity): **event-driven JavaScript to connect the simulation logic to the UI.**
+
+
 ---
 ## 📊 How I Made the Data Visualizations  
 I used the **Menstrual Cycle Data** from [Kaggle](https://www.kaggle.com/datasets/nikitabisht/menstrual-cycle-data) to create the graphs.  
