@@ -37,6 +37,23 @@ class UserProfile {
         this.explanations = new Set();
     }
 
+    getPredictedCycles() {
+        const first = this.adjustment(this.stress, this.sleepHours, this.exerciseHours);
+        this.predictedCyclesArr[0] = first;
+        for (let i = 1; i < 3; i++) {
+            const variation = probability() * 1.5; // +/- ~1.5 days
+            let cycle = Math.round(this.predictedCyclesArr[i - 1] + variation);
+            if (cycle < 20) {
+                cycle = 20;
+            }
+            if (cycle > 40) {
+                cycle = 40;
+            }
+            this.predictedCyclesArr[i] = cycle;
+        }
+        return this.predictedCyclesArr;
+    }
+
     //this helps classify exercise level
     exerciseClassify() {
         if (this.exerciseHours > 7)  return 'high';
@@ -52,7 +69,7 @@ class UserProfile {
         this.stress = stress;
         this.sleepHours = sleepHours;
         this.exerciseHours = exerciseHours;
-    let cycleLength = this.cycleLength;
+        let cycleLength = this.cycleLength;
         const base = 28.0;
 
         //the formula:
@@ -86,7 +103,6 @@ class UserProfile {
         } else {
             this.result = 'irregular';
         }
-        this.threeMonthSim(this.stress, this.sleepHours, this.exerciseHours);
         if (this.predictedCyclesArr[2] > this.cycleLength) {
             this.result = 'watch for change!';
         }
@@ -97,8 +113,13 @@ class UserProfile {
         this.explanations.clear();
         let reason = '';
         const cls = this.classification(this.cycleLength);
+        if (cls == 'normal' && this.sleepHours >= 7 && this.stress <= 8) {
+            reason = ' It\'s likely because of your sleep and exercise hours are normal and your stress is under control.';
+        } else if (cls == 'irregular' && this.cycleLength > 35 && (this.exerciseHours >= 7)) {
+            reason = " It\'s likely because of long hours of exercise or disrupted recovery.";
+        }
         if (cls == 'normal') {
-            this.explanations.add('Your predicted cycle length is regular. Your sleep and exercise hours are normal and your stress is under control.');
+            this.explanations.add('Your predicted cycle length is regular.' + reason);
         } else if (cls == 'irregular' && this.cycleLength < 21) {
             if (this.stress >= 8) {
                 reason = ' high stress';
@@ -107,44 +128,11 @@ class UserProfile {
             }
             this.explanations.add('Your predicted cycle length is shorter than regular. It\'s likely because of' + reason);
         } else if (cls == 'irregular' && this.cycleLength > 35) {
-            this.explanations.add('Your predicted cycle length is longer than regular. It\'s likely because of long hours of exercise or disrupted recovery.');
+            this.explanations.add('Your predicted cycle length is longer than regular.' + reason);
         } else {
             this.explanations.add('Your predicted cycle length may change over the course of 3 months.');
         }
-
         return Array.from(this.explanations).join(' ');
-    }
-
-    threeMonthSim(stress, sleepHours, exerciseHours) {
-        if (this.stress < 0 || this.stress > 10 || this.sleepHours < 0.0 || this.exerciseHours < 0.0) {
-            throw new Error('Invalid inputs');
-        }
-
-        // month 0 - baseline
-    const first = this.adjustment(stress, sleepHours, exerciseHours);
-    this.predictedCyclesArr[0] = first;
-
-        for (let i = 1; i < 3; i++) {
-            const variation = probability() * 1.5; // +/- ~1.5 days
-            let cycle = Math.round(this.predictedCyclesArr[i - 1] + variation);
-            if (cycle < 20) {
-                cycle = 20;
-            }
-            if (cycle > 40) {
-                cycle = 40;
-            }
-            this.predictedCyclesArr[i] = cycle;
-        }
-
-        // compare first to last
-        let last = this.predictedCyclesArr[2];
-        if (first == last) {
-            return 'Your predicted cycle length remains stable over three months, suggesting your stress, sleep, and exercise patterns are consistent.';
-        } else if (last > first) {
-            return 'Your predicted cycle length gradually increases over three months, likely due to sustained exercise load or reduced recovery.';
-        } else {
-            return 'Your predicted cycle length decreases over three months, which may reflect improving sleep or reduced stress.';
-        }
     }
 
     compare(monthOne, monthTwo) {
@@ -154,9 +142,22 @@ class UserProfile {
         return this.predictedCyclesArr[monthOne - 1] == this.predictedCyclesArr[monthTwo - 1];
     }
 
-    getPredictedCycles() {
-        return this.predictedCyclesArr;
+    threeMonthSim(stress, sleepHours, exerciseHours) {
+        if (this.stress < 0 || this.stress > 10 || this.sleepHours < 0.0 || this.exerciseHours < 0.0) {
+            throw new Error('Invalid inputs');
+        }
+        if (this.compare(1, 3)) {
+            return 'Your predicted cycle length remains stable over three months, suggesting your stress, sleep, and exercise patterns are consistent.';
+        } else if (this.predictedCyclesArr[2] > this.predictedCyclesArr[0]) {
+            return 'Your predicted cycle length gradually increases over three months, likely due to sustained exercise load or reduced recovery.';
+        } else {
+            return 'Your predicted cycle length decreases over three months, which may reflect improving sleep or reduced stress.';
+        }
     }
+
+
+
+
 
     getCycleLength() {
         return this.cycleLength;
@@ -237,11 +238,11 @@ document.addEventListener('DOMContentLoaded', () => { //when the HTML doc is loa
                 
                 //athlete profile is created if profile type is athlete 
                 const profile = (profileType === 'athlete') ? new Athlete(stress, sleepHours, exerciseHours) : new UserProfile(stress, sleepHours, exerciseHours);
-                const threeMonthMessage = profile.threeMonthSim(stress, sleepHours, exerciseHours);
                 const cycles = profile.getPredictedCycles();
                 const classification = profile.classification(profile.getCycleLength());
                 const explanation = profile.explanation();
-
+                const threeMonthMessage = profile.threeMonthSim(stress, sleepHours, exerciseHours);
+                
                 //writes results into output element as HTML
                 output.innerHTML =
                     `<p>${escapeHtml(threeMonthMessage)}</p>` +
