@@ -21,7 +21,7 @@ As a recent extension of Girls & Cycles, I developed an interactive menstrual cy
 This simulator represents my current work on the project and applies concepts from my CS 124 coursework, moving beyond static data visualization into interactive, user-driven modeling.
 ## 🖥️ Interactive Simulator Webpage
 
-**The simulator is embedded directly into the website, where users input stress levels, sleep hours, and weekly exercise to receive predicted cycle lengths across three consecutive cycles.**
+**The simulator is embedded directly into the website, where users input stress levels, sleep hours, and weekly exercise to receive predicted cycle lengths across three consecutive cycles.** The simulator is designed to be **exploratory and educational**, not diagnostic, empowering users to **better understand their bodies** and **advocate for their health.**
 
 ## 🛠️ Technologies Used (Simulator)
 
