@@ -14,7 +14,24 @@ While it currently focuses on menstrual cycles, my vision is to expand it to hig
 These challenges have real consequences — from women being unable to advocate for themselves in medical settings to AI models failing to address female-specific health concerns. **Girls & Cycles is a step toward changing that.**  
 
 ---
+##🔮 Menstrual Cycle Simulator (New Work)
 
+As a recent extension of Girls & Cycles, I developed an interactive menstrual cycle simulator that allows users to model how lifestyle factors may influence cycle length over time.
+
+This simulator represents my current work on the project and applies concepts from my CS 124 coursework, moving beyond static data visualization into interactive, user-driven modeling.
+##🖥️ Interactive Simulator Webpage
+
+**The simulator is embedded directly into the website, where users input stress levels, sleep hours, and weekly exercise to receive predicted cycle lengths across three consecutive cycles.**
+
+##🛠️ Technologies Used (Simulator)
+
+-Java (initial modeling & OOP design)
+
+-JavaScript (logic translation & interactivity)
+  -**event-driven JavaScript to connect the simulation logic to the UI.**
+
+-HTML / CSS (UI integration)
+---
 ## 📊 How I Made the Data Visualizations  
 I used the **Menstrual Cycle Data** from [Kaggle](https://www.kaggle.com/datasets/nikitabisht/menstrual-cycle-data) to create the graphs.  
 
